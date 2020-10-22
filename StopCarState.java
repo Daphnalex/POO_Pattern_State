@@ -15,7 +15,7 @@ public class StopCarState implements State {
     };
 
     public void brokenCar(ControllerCar controller){
-        System.out.println(controller.getCurrentCar().getName() + " est cassée.");
+        System.out.println(controller.getCurrentCar().getName() + " est cassée. Sans doute une fuite d'huile !");
         controller.changeState(new BrokenCarState());
     };
 

@@ -3,7 +3,6 @@ public class TrafficLight extends Observable{
     private String currentColor;
 
     public TrafficLight(String color){
-        System.out.println("test couleur " + color);
         switch(color){
             case "VERT":
             case "ORANGE":
