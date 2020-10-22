@@ -17,9 +17,18 @@ public class Executable {
         voiture1.repair();
         System.out.println("\nVoiture2 accélère");
         voiture2.boost();
-
         System.out.println("\nLe feu passe au vert");
         feu1.changeColor("VERT");
-        
+        TrafficLight feu2 = new TrafficLight("ROUGE");
+        System.out.println("\nLe feu piéton est rouge");
+        Pedestrian pieton1 = new RespectfulPedestrian("Pieton1");
+        Pedestrian pieton2 = new DisrespecfulPedestrian("Pieton2");
+        feu2.addObserver(pieton1);
+        feu2.addObserver(pieton2);
+        System.out.println("Les piétons vont ils traverser au feu rouge ?");
+        System.out.println(pieton1);
+        System.out.println(pieton1.getName() + pieton1.tryToCross());
+        System.out.println(pieton2);
+        System.out.println(pieton2.getName() + pieton2.tryToCross());
     }
 }
