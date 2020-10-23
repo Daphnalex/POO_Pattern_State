@@ -4,12 +4,12 @@ public class BoostCarState implements State {
         System.out.println(controller.getCurrentCar().getName() + " démarre très vite.");
         controller.changeState(new StartCarState());
     };
-
+   
      public void stopCar(ControllerCar controller){
         System.out.println(controller.getCurrentCar().getName() + " va trop vite. Elle grille le feu rouge et provoque un accident. Elle est maintenant cassée.");
         controller.changeState(new BrokenCarState());
      };
-
+    
     public void boostCar(ControllerCar controller){
         System.out.println(controller.getCurrentCar().getName() + " est déjà en mode boost.");
     };

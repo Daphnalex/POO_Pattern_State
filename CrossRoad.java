@@ -1,5 +1,7 @@
 public interface CrossRoad{
-    
+    /**
+        @return a message if the pedestrian walk or not to the red traffic's light
+     */
     public String walk();
 
 }
